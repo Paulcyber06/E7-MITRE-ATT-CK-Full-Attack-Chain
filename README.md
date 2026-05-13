@@ -201,7 +201,7 @@ En tant qu'analyste SOC L1, certaines questions restent sans réponse et nécess
  
 ## 7. Conclusion
  
-> 🔴 **Buttercup Games a été compromise. Un webshell actif est présent sur le serveur web.**
+> 🔴 **La société Buttercup Games a été compromise. Un webshell actif est présent sur le serveur web.**
  
 Cette investigation illustre une attaque en **trois phases distinctes** :
  
