@@ -41,6 +41,9 @@ Le framework **Cyber Kill Chain®**, développé par Lockheed Martin, identifie 
 [![Cyber Kill Chain — Lockheed Martin](killchain.png)](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)
  
 *Source : [Lockheed Martin — Cyber Kill Chain®](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)*
+
+[![MITRE ATT&CK Matrix](mitre_matrix.png)](https://attack.mitre.org)
+*Source : [MITRE ATT&CK® Matrix for Enterprise](https://attack.mitre.org)*
  
 | Phase | Description |
 |-------|-------------|
@@ -99,6 +102,8 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
  
 ### [T1110](https://attack.mitre.org/techniques/T1110/) — Brute Force
 **Épisode 5** — N'ayant pas trouvé `/passwords.pdf`, l'attaquant a lancé une attaque brute force FTP contre le compte `jenny`.
+
+ [![MITRE T1110 — Brute Force](mitre_t1110.png)](https://attack.mitre.org/techniques/T1110/)
  
 | Indicateur | Valeur |
 |-----------|--------|
