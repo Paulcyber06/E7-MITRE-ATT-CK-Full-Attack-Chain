@@ -163,7 +163,7 @@ En tant qu'analyste SOC L1, certaines questions restent sans réponse et nécess
 | Comment l'attaquant a-t-il obtenu le nom d'utilisateur `jenny` ? | Ancien employé / connaissance interne / document obtenu en amont non détecté | 🔴 Critique |
 | L'IP `87.194.216.51` et l'attaquant FTP sont-ils la même personne ? | Mode opératoire similaire — méthodique et persistant | 🟡 À confirmer |
 | Le webshell a-t-il été utilisé après le premier accès ? | Non déterminé — nécessite analyse des logs serveur web | 🔴 Critique |
-| D'autres comptes ont-ils été ciblés ? | Non déterminé — nécessite audit complet des logs FTP | 🟡 À vérifier |
+| D'autres comptes ont-ils été ciblés ? | Non déterminé — nécessite analyse complète des logs FTP de la session du 2021-02-01 | 🟡 À vérifier |
  
 ---
  
