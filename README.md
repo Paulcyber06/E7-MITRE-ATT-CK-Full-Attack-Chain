@@ -42,8 +42,7 @@ Le framework **Cyber Kill Chain®**, développé par Lockheed Martin, identifie 
  
 *Source : [Lockheed Martin — Cyber Kill Chain®](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)*
 
-[![MITRE ATT&CK Matrix](mitre_matrix.png)](https://attack.mitre.org)
-*Source : [MITRE ATT&CK® Matrix for Enterprise](https://attack.mitre.org)*
+
  
 | Phase | Description |
 |-------|-------------|
@@ -54,7 +53,11 @@ Le framework **Cyber Kill Chain®**, développé par Lockheed Martin, identifie 
 | 5. Installation | Installation d'un outil de persistance |
 | 6. Command & Control | Canal de communication avec la machine compromise |
 | 7. Actions on Objectives | L'attaquant atteint son objectif final |
- 
+
+ [![MITRE ATT&CK Matrix](mitre_matrix.png)](https://attack.mitre.org)
+*Source : [MITRE ATT&CK® Matrix for Enterprise](https://attack.mitre.org)*
+
+
 > ⚠️ **Dans l'investigation Buttercup Games, l'attaquant a été bloqué aux phases 3 et 4 lors de ses premières tentatives** — il a dû changer de tactique avant de réussir.
  
 ---
