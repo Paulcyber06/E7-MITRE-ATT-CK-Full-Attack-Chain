@@ -165,5 +165,11 @@ Un attaquant déterminé ne s'arrête pas à un premier échec. Il adapte sa tac
 - Alertes en temps réel sur les comportements suspects
 - Documentation complète pour l'escalade N2
 ---
- 
-*Investigation basée sur des fichiers d'exercice issus de TryHackMe et de la plateforme Splunk — dans le cadre d'un portfolio Blue Team SOC.*
+ ## 📁 Reproduire cette analyse
+
+Ce rapport est basé sur les investigations des épisodes E1 à E6.
+Tous les fichiers sources sont disponibles dans leurs articles respectifs :
+
+- **E1** — Email de phishing réel (non distribué pour des raisons de confidentialité)
+- **E2/E3/E4** — [tutorialdata.zip Splunk](https://docs.splunk.com/images/Tutorial/tutorialdata.zip)
+- **E5/E6** — [TryHackMe — room h4cked](https://tryhackme.com/room/h4cked)
