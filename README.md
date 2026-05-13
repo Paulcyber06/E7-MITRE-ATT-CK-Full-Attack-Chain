@@ -126,6 +126,10 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
  
 ### [T1505.003](https://attack.mitre.org/techniques/T1505/003/) — Web Shell
 **Épisode 6** — En moins de 15 secondes après la connexion FTP :
+
+[![MITRE T1505.003 — Web Shell](webshell.png)](https://attack.mitre.org/techniques/T1505/003/)
+ 
+
  
 | Heure | Action |
 |-------|--------|
