@@ -54,8 +54,6 @@ Le framework **Cyber Kill Chain®**, développé par Lockheed Martin, identifie 
 | 6. Command & Control | Canal de communication avec la machine compromise |
 | 7. Actions on Objectives | L'attaquant atteint son objectif final |
 
- [![MITRE ATT&CK Matrix](mitre_matrix.png)](https://attack.mitre.org)
-*Source : [MITRE ATT&CK® Matrix for Enterprise](https://attack.mitre.org)*
 
 
 > ⚠️ **Dans l'investigation Buttercup Games, l'attaquant a été bloqué aux phases 3 et 4 lors de ses premières tentatives** — il a dû changer de tactique avant de réussir.
@@ -74,6 +72,10 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
 | Exploitation | Valid Accounts | [T1078](https://attack.mitre.org/techniques/T1078/) | Wireshark | ❌ Connexion FTP réussie | [E5](https://github.com/Paulcyber06/E5-Wireshark-FTP-Brute-Force) |
 | Installation | Web Shell | [T1505.003](https://attack.mitre.org/techniques/T1505/003/) | Wireshark | ❌ shell.php déployé dans /var/www/html | [E6](https://github.com/Paulcyber06/E6-Wireshark-Post-Exploitation) |
 | Actions on Objectives | Exploit Public-Facing Application | [T1190](https://attack.mitre.org/techniques/T1190/) | Wireshark | ❌ Webshell accédé via navigateur Linux | [E6](https://github.com/Paulcyber06/E6-Wireshark-Post-Exploitation) |
+
+[![MITRE ATT&CK Matrix for Enterprise](https://github.com/Paulcyber06/E7-MITRE-ATT-CK-Full-Attack-Chain/raw/main/mitre_matrix.png)](https://attack.mitre.org)
+
+*Source : [MITRE ATT&CK® Matrix for Enterprise](https://attack.mitre.org)*
  
 ---
  
