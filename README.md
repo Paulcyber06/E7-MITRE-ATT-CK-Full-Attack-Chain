@@ -218,3 +218,5 @@ Tous les fichiers sources sont disponibles dans leurs articles respectifs :
 - **E2/E3/E4** — [tutorialdata.zip Splunk](https://docs.splunk.com/images/Tutorial/tutorialdata.zip)
 - **E5/E6** — [TryHackMe — room h4cked](https://tryhackme.com/room/h4cked)
 ---
+
+*© Paulcyber06 — Tous droits réservés. Reproduction interdite sans autorisation.*
