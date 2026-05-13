@@ -219,4 +219,4 @@ Tous les fichiers sources sont disponibles dans leurs articles respectifs :
 - **E5/E6** — [TryHackMe — room h4cked](https://tryhackme.com/room/h4cked)
 ---
 
-*© Paulcyber06 — Tous droits réservés. Reproduction interdite sans autorisation.*
+*© Paulcyber06 — Tous droits réservés.*
