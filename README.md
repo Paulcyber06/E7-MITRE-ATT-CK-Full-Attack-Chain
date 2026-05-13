@@ -88,7 +88,7 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
 |-----------|--------|
 | SPF | ❌ fail |
 | DMARC | ❌ fail |
-| DKIM | ⚠️ pass — signé par `bttlazer.org` (domaine attaquant) |
+| DKIM | ⚠️ pass — signé par `bttlazer[.]org` (domaine attaquant) |
 | Résultat | ❌ Échec — employé non piégé |
  
 ---
