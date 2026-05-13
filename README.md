@@ -7,94 +7,128 @@
 ## 📚 Table des matières
  
 - [1. Contexte global](#1-contexte-global)
-- [2. Kill Chain complète](#2-kill-chain-complète)
-- [3. Détail des techniques ATT&CK](#3-détail-des-techniques-attck)
-- [4. Gaps d'investigation](#4-gaps-dinvestigation)
-- [5. Rapport d'escalade — Éléments transmis à l'équipe N2](#5-rapport-descalade--éléments-transmis-à-léquipe-n2)
-- [6. Conclusion](#6-conclusion)
+- [2. Cyber Kill Chain® — Lockheed Martin](#2-cyber-kill-chain--lockheed-martin)
+- [3. Kill Chain complète — Buttercup Games](#3-kill-chain-complète--buttercup-games)
+- [4. Détail des techniques ATT&CK](#4-détail-des-techniques-attck)
+- [5. Gaps d'investigation](#5-gaps-dinvestigation)
+- [6. Rapport d'escalade — Éléments transmis à l'équipe N2](#6-rapport-descalade--éléments-transmis-à-léquipe-n2)
+- [7. Conclusion](#7-conclusion)
 ---
  
 ## 1. Contexte global
  
 L'équipe SOC de **Buttercup Games** a détecté et investigué une série d'attaques coordonnées contre l'infrastructure de la société. L'investigation a débuté par la détection d'un email de phishing et s'est conclue par la découverte d'un webshell actif sur le serveur web.
  
+L'attaquant, persistant et méthodique, a adapté sa tactique à chaque échec — du phishing à la reconnaissance web, puis au brute force FTP.
+ 
 **Timeline des incidents :**
  
 | Épisode | Outil | Incident détecté |
 |---------|-------|-----------------|
-| E1 | Email | Tentative de phishing usurpant Proton for Business |
-| E2 | Splunk | Reconnaissance web — IP sondant `/passwords.pdf` |
-| E3 | Splunk | Analyse comportementale — double activité suspecte |
-| E4 | Splunk | Dashboard SOC + alerte automatique configurée |
-| E5 | Wireshark | Brute force FTP — compte `jenny` compromis |
-| E6 | Wireshark | Post-exploitation — webshell `shell.php` déployé |
- 
-> ⚠️ **L'investigation révèle un attaquant persistant et méthodique.** Face à chaque obstacle, il a changé de tactique — du phishing à la reconnaissance web, puis au brute force FTP.
+| [E1](https://github.com/Paulcyber06/E1-Phishing-Proton-Brand-Impersonation) | Email | Tentative de phishing usurpant Proton for Business |
+| [E2](https://github.com/Paulcyber06/E2-Splunk-Reconnaissance-Detection) | Splunk | Reconnaissance web — IP sondant `/passwords.pdf` |
+| [E3](https://github.com/Paulcyber06/E3-Splunk-Behavioral-Analysis) | Splunk | Analyse comportementale — double activité suspecte |
+| [E4](https://github.com/Paulcyber06/E4-Splunk-Dashboard-and-Alerts) | Splunk | Dashboard SOC + alerte automatique configurée |
+| [E5](https://github.com/Paulcyber06/E5-Wireshark-FTP-Brute-Force) | Wireshark | Brute force FTP — compte `jenny` compromis |
+| [E6](https://github.com/Paulcyber06/E6-Wireshark-Post-Exploitation) | Wireshark | Post-exploitation — webshell `shell.php` déployé |
  
 ---
  
-## 2. Kill Chain complète
+## 2. Cyber Kill Chain® — Lockheed Martin
  
-La progression de l'attaque suit la kill chain de Lockheed Martin et se mappe directement sur le framework MITRE ATT&CK :
+Le framework **Cyber Kill Chain®**, développé par Lockheed Martin, identifie les 7 phases que tout attaquant doit compléter pour atteindre son objectif. Interrompre l'attaque à n'importe quelle phase suffit à la neutraliser.
  
-| Phase | Technique MITRE | ID | Outil | Résultat | Épisode |
-|-------|----------------|-----|-------|---------|---------|
-| Initial Access | Phishing | T1566 | Email | ❌ Échec — employé non piégé | [E1](https://github.com/Paulcyber06/Analyse-de-Phishing-Usurpation-de-la-Marque-Proton) |
-| Discovery | File and Directory Discovery | T1083 | Splunk | ❌ Échec — `/passwords.pdf` non trouvé | [E2](https://github.com/Paulcyber06/E1-SPL-Basics-Splunk-reconnaissance-Detection) |
-| Discovery | Network Service Discovery | T1046 | Splunk | ⚠️ Serveur web cartographié | [E3](https://github.com/Paulcyber06/E2-SPL-Basics-Splunk-Transforming-Commands) |
-| Credential Access | Brute Force | T1110 | Wireshark | ❌ Credentials compromis : jenny/password123 | [E5](https://github.com/Paulcyber06/E1-Wireshark-FTP-Brute-Force-Detection) |
-| Lateral Movement | Valid Accounts | T1078 | Wireshark | ❌ Connexion FTP réussie | [E5](https://github.com/Paulcyber06/E1-Wireshark-FTP-Brute-Force-Detection) |
-| Persistence | Web Shell | T1505.003 | Wireshark | ❌ shell.php déployé dans /var/www/html | [E6](https://github.com/Paulcyber06/E2-Wireshark-FTP-Post-Exploitation) |
-| Execution | Exploit Public-Facing Application | T1190 | Wireshark | ❌ Webshell accédé via navigateur | [E6](https://github.com/Paulcyber06/E2-Wireshark-FTP-Post-Exploitation) |
+[![Cyber Kill Chain — Lockheed Martin](killchain.png)](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)
+ 
+*Source : [Lockheed Martin — Cyber Kill Chain®](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)*
+ 
+| Phase | Description |
+|-------|-------------|
+| 1. Reconnaissance | L'attaquant collecte des informations sur la cible |
+| 2. Weaponization | Création d'un payload exploitant une vulnérabilité |
+| 3. Delivery | Livraison du payload — email, web, USB |
+| 4. Exploitation | Exécution du code sur le système cible |
+| 5. Installation | Installation d'un outil de persistance |
+| 6. Command & Control | Canal de communication avec la machine compromise |
+| 7. Actions on Objectives | L'attaquant atteint son objectif final |
+ 
+> ⚠️ **Dans l'investigation Buttercup Games, l'attaquant a été bloqué aux phases 3 et 4 lors de ses premières tentatives** — il a dû changer de tactique avant de réussir.
  
 ---
  
-## 3. Détail des techniques ATT&CK
+## 3. Kill Chain complète — Buttercup Games
  
-### T1566 — Phishing
+Mapping de l'investigation sur le framework MITRE ATT&CK :
+ 
+| Phase Kill Chain | Technique MITRE | ID | Outil | Résultat | Épisode |
+|-----------------|----------------|-----|-------|---------|---------|
+| Reconnaissance | File and Directory Discovery | [T1083](https://attack.mitre.org/techniques/T1083/) | Splunk | ❌ `/passwords.pdf` non trouvé | [E2](https://github.com/Paulcyber06/E2-Splunk-Reconnaissance-Detection) / [E3](https://github.com/Paulcyber06/E3-Splunk-Behavioral-Analysis) |
+| Delivery | Phishing | [T1566](https://attack.mitre.org/techniques/T1566/) | Email | ❌ Employé non piégé | [E1](https://github.com/Paulcyber06/E1-Phishing-Proton-Brand-Impersonation) |
+| Exploitation | Brute Force | [T1110](https://attack.mitre.org/techniques/T1110/) | Wireshark | ❌ Credentials compromis : jenny/password123 | [E5](https://github.com/Paulcyber06/E5-Wireshark-FTP-Brute-Force) |
+| Exploitation | Valid Accounts | [T1078](https://attack.mitre.org/techniques/T1078/) | Wireshark | ❌ Connexion FTP réussie | [E5](https://github.com/Paulcyber06/E5-Wireshark-FTP-Brute-Force) |
+| Installation | Web Shell | [T1505.003](https://attack.mitre.org/techniques/T1505/003/) | Wireshark | ❌ shell.php déployé dans /var/www/html | [E6](https://github.com/Paulcyber06/E6-Wireshark-Post-Exploitation) |
+| Actions on Objectives | Exploit Public-Facing Application | [T1190](https://attack.mitre.org/techniques/T1190/) | Wireshark | ❌ Webshell accédé via navigateur Linux | [E6](https://github.com/Paulcyber06/E6-Wireshark-Post-Exploitation) |
+ 
+---
+ 
+## 4. Détail des techniques ATT&CK
+ 
+### [T1566](https://attack.mitre.org/techniques/T1566/) — Phishing
 **Épisode 1** — L'attaquant, ayant eu connaissance que Buttercup Games utilise **Proton for Business**, a usurpé l'identité de Proton pour tenter de voler les credentials d'un employé via une fausse page de connexion hébergée sur `vercel.app`.
  
-- SPF : ❌ fail
-- DMARC : ❌ fail
-- DKIM : ⚠️ pass — mais signé par `bttlazer.org` (domaine attaquant)
+| Indicateur | Valeur |
+|-----------|--------|
+| SPF | ❌ fail |
+| DMARC | ❌ fail |
+| DKIM | ⚠️ pass — signé par `bttlazer.org` (domaine attaquant) |
+| Résultat | ❌ Échec — employé non piégé |
+ 
 ---
  
-### T1083 — File and Directory Discovery
-**Épisodes 2 & 3** — L'IP `87.194.216.51` a sondé activement le serveur web à la recherche de fichiers sensibles sur une période de **7 jours**. La cible principale : `/passwords.pdf`, tentée **3 fois** à des dates différentes.
+### [T1083](https://attack.mitre.org/techniques/T1083/) — File and Directory Discovery
+**Épisodes 2 & 3** — L'IP `87.194.216.51` a sondé activement le serveur web à la recherche de fichiers sensibles sur une période de **7 jours**.
  
-- Technique : **slow and low** — basse fréquence pour éviter la détection
-- Double activité détectée : 894 accès légitimes (status 200) simultanés aux tentatives de reconnaissance
+| Indicateur | Valeur |
+|-----------|--------|
+| Cible principale | `/passwords.pdf` — tentée 3 fois |
+| Technique | Slow and low — basse fréquence pour éviter la détection |
+| Double activité | 894 accès légitimes simultanés aux tentatives de reconnaissance |
+| Résultat | ❌ Échec — fichier non trouvé |
+ 
 ---
  
-### T1110 — Brute Force
+### [T1110](https://attack.mitre.org/techniques/T1110/) — Brute Force
 **Épisode 5** — N'ayant pas trouvé `/passwords.pdf`, l'attaquant a lancé une attaque brute force FTP contre le compte `jenny`.
  
-| Élément | Valeur |
-|---------|--------|
+| Indicateur | Valeur |
+|-----------|--------|
 | Date | 2021-02-01 à 23:26:22 |
 | Credentials trouvés | jenny / password123 |
-| Durée de l'attaque | Quelques secondes |
 | Wordlist probable | rockyou.txt |
+| Résultat | ❌ Compromission réussie |
  
 ---
  
-### T1078 — Valid Accounts
-**Épisode 5** — Après avoir trouvé les credentials, l'attaquant s'est connecté au serveur FTP avec le compte `jenny` et a immédiatement commencé la phase de post-exploitation.
+### [T1078](https://attack.mitre.org/techniques/T1078/) — Valid Accounts
+**Épisode 5** — Après avoir trouvé les credentials, l'attaquant s'est connecté au serveur FTP avec le compte `jenny` à **23:26:31**.
  
 ---
  
-### T1505.003 — Web Shell
-**Épisode 6** — En moins de 15 secondes après la connexion FTP, l'attaquant a :
+### [T1505.003](https://attack.mitre.org/techniques/T1505/003/) — Web Shell
+**Épisode 6** — En moins de 15 secondes après la connexion FTP :
  
-1. Identifié le système : **Linux UNIX Type L8**
-2. Localisé la racine web : `/var/www/html`
-3. Uploadé : `shell.php`
-4. Accordé les permissions : `CHMOD 777`
-5. Accédé au webshell via navigateur : `GET /shell.php` à **23:26:58**
+| Heure | Action |
+|-------|--------|
+| 23:26:31 | Connexion FTP réussie |
+| 23:26:33 | Identification du répertoire : `/var/www/html` |
+| 23:26:39 | Upload : `shell.php` |
+| 23:26:41 | `CHMOD 777 shell.php` — permissions d'exécution |
+| 23:26:58 | Accès au webshell via navigateur |
+ 
 ---
  
-### T1190 — Exploit Public-Facing Application
-**Épisode 6** — L'accès au webshell a été confirmé via la requête HTTP :
+### [T1190](https://attack.mitre.org/techniques/T1190/) — Exploit Public-Facing Application
+**Épisode 6** — Confirmation de l'accès au webshell :
  
 ```
 GET /shell.php HTTP/1.1
@@ -102,11 +136,15 @@ Host: 192.168.0.115
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Firefox/78.0
 ```
  
-L'attaquant utilise une **machine Linux** avec Firefox 78.0.
+| Indicateur | Valeur |
+|-----------|--------|
+| IP serveur victime | 192.168.0.115 |
+| OS attaquant | Linux x86_64 |
+| Navigateur | Firefox 78.0 |
  
 ---
  
-## 4. Gaps d'investigation
+## 5. Gaps d'investigation
  
 En tant qu'analyste SOC L1, certaines questions restent sans réponse et nécessitent une investigation approfondie par l'équipe N2 :
  
@@ -114,19 +152,19 @@ En tant qu'analyste SOC L1, certaines questions restent sans réponse et nécess
 |----------|-----------|---------|
 | Comment l'attaquant a-t-il obtenu le nom d'utilisateur `jenny` ? | Ancien employé / connaissance interne / document obtenu en amont non détecté | 🔴 Critique |
 | L'IP `87.194.216.51` et l'attaquant FTP sont-ils la même personne ? | Mode opératoire similaire — méthodique et persistant | 🟡 À confirmer |
-| Le webshell `shell.php` a-t-il été utilisé après le premier accès ? | Non déterminé — nécessite analyse des logs serveur web | 🔴 Critique |
+| Le webshell a-t-il été utilisé après le premier accès ? | Non déterminé — nécessite analyse des logs serveur web | 🔴 Critique |
 | D'autres comptes ont-ils été ciblés ? | Non déterminé — nécessite audit complet des logs FTP | 🟡 À vérifier |
  
 ---
  
-## 5. Rapport d'escalade — Éléments transmis à l'équipe N2
+## 6. Rapport d'escalade — Éléments transmis à l'équipe N2
  
 ### 🔴 Actions immédiates requises
  
 - Supprimer `/var/www/html/shell.php` du serveur
 - Désactiver le compte `jenny` et forcer la réinitialisation du mot de passe
-- Bloquer l'IP `192.168.0.115` et `87.194.216.51` au niveau du pare-feu
-- Isoler le serveur `192.168.0.115` le temps de l'investigation
+- Bloquer les IPs `192.168.0.115` et `87.194.216.51` au niveau du pare-feu
+- Isoler le serveur victime le temps de l'investigation
 ### 📋 Éléments de preuve collectés
  
 | Élément | Source | Épisode |
@@ -139,7 +177,7 @@ En tant qu'analyste SOC L1, certaines questions restent sans réponse et nécess
 | OS attaquant : Linux x86_64, Firefox 78.0 | Capture Wireshark | E6 |
 | Heure de compromission : 2021-02-01 23:26:31 | Capture Wireshark | E5/E6 |
  
-### 🔍 Investigation complémentaire demandée
+### 🔍 Investigation complémentaire demandée à l'équipe N2
  
 - Analyser les logs Apache pour détecter tout accès à `shell.php` après le premier
 - Vérifier les logs FTP pour identifier d'autres tentatives de brute force
@@ -147,29 +185,31 @@ En tant qu'analyste SOC L1, certaines questions restent sans réponse et nécess
 - Investiguer l'origine du nom d'utilisateur `jenny`
 ---
  
-## 6. Conclusion
+## 7. Conclusion
  
 > 🔴 **Buttercup Games a été compromise. Un webshell actif est présent sur le serveur web.**
  
 Cette investigation illustre une attaque en **trois phases distinctes** :
  
-1. **Tentative d'accès social** (E1) — Phishing Proton → échec
-2. **Reconnaissance et cartographie** (E2/E3/E4) — Splunk détecte l'IP qui cherche `/passwords.pdf` → échec
-3. **Accès direct par force brute** (E5/E6) — Brute force FTP → compromission totale en 32 secondes
+1. **Tentative d'accès social** (E1) — Phishing Proton → ❌ échec
+2. **Reconnaissance et cartographie** (E2/E3/E4) — IP cherche `/passwords.pdf` → ❌ échec
+3. **Accès direct par force brute** (E5/E6) — Brute force FTP → ✅ compromission totale en 32 secondes
 **Ce que cette investigation démontre :**
  
-Un attaquant déterminé ne s'arrête pas à un premier échec. Il adapte sa tactique jusqu'à trouver le maillon faible — ici, un mot de passe faible sur un protocole non chiffré.
+Un attaquant déterminé ne s'arrête pas à un premier échec. Il adapte sa tactique jusqu'à trouver le maillon faible — ici, un mot de passe faible sur un protocole non chiffré (FTP).
  
 **Ce que le SOC a mis en place :**
 - Dashboard de surveillance automatique (E4)
 - Alertes en temps réel sur les comportements suspects
 - Documentation complète pour l'escalade N2
 ---
- ## 📁 Reproduire cette analyse
-
+ 
+## 📁 Reproduire cette analyse
+ 
 Ce rapport est basé sur les investigations des épisodes E1 à E6.
 Tous les fichiers sources sont disponibles dans leurs articles respectifs :
-
+ 
 - **E1** — Email de phishing réel (non distribué pour des raisons de confidentialité)
 - **E2/E3/E4** — [tutorialdata.zip Splunk](https://docs.splunk.com/images/Tutorial/tutorialdata.zip)
 - **E5/E6** — [TryHackMe — room h4cked](https://tryhackme.com/room/h4cked)
+---
