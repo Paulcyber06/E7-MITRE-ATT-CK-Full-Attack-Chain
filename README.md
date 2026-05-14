@@ -188,6 +188,7 @@ GET /shell.php HTTP/1.1
 Host: 192.168.0.115
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Firefox/78.0
 ```
+<br>
 <div align="center">
     
 | Indicateur | Valeur |
@@ -197,6 +198,9 @@ User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Firefox/78.0
 | Navigateur | Firefox 78.0 |
 
    </div>
+
+   <br>
+
    
 ---
  
