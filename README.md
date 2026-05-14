@@ -258,6 +258,8 @@ En tant qu'analyste SOC L1, certaines questions restent sans réponse et nécess
 ---
  
 ## 7. Conclusion
+
+<br>
  
 > 🔴 **La société Buttercup Games a été compromise. Un webshell actif est présent sur le serveur web.**
  
@@ -274,6 +276,8 @@ Un attaquant déterminé ne s'arrête pas à un premier échec. Il adapte sa tac
 - Dashboard de surveillance automatique (E4)
 - Alertes en temps réel sur les comportements suspects
 - Documentation complète pour l'escalade N2
+
+  <br>
 
 
 <div align="center">
