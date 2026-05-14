@@ -107,13 +107,17 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
  
 ### [T1083](https://attack.mitre.org/techniques/T1083/) — File and Directory Discovery
 **Épisodes 2 & 3** — L'IP `87.194.216.51` a sondé activement le serveur web à la recherche de fichiers sensibles sur une période de **7 jours**.
- 
+
+ <div align="center">
+  
 | Indicateur | Valeur |
 |-----------|--------|
 | Cible principale | `/passwords.pdf` — tentée 3 fois |
 | Technique | Slow and low — basse fréquence pour éviter la détection |
 | Double activité | 894 accès réussis simultanés aux tentatives de reconnaissance |
 | Résultat | ❌ Échec — fichier non trouvé |
+
+ </div>
  
 ---
  
@@ -121,6 +125,8 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
 **Épisode 5** — N'ayant pas trouvé `/passwords.pdf`, l'attaquant a lancé une attaque brute force FTP contre le compte `jenny`.
 
  [![MITRE T1110 — Brute Force](mitre_t1110.png)](https://attack.mitre.org/techniques/T1110/)
+
+ <div align="center">
  
 | Indicateur | Valeur |
 |-----------|--------|
@@ -128,7 +134,8 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
 | Credentials trouvés | jenny / password123 |
 | Wordlist probable | rockyou.txt |
 | Résultat | ❌ Compromission réussie |
- 
+
+  </div>
 ---
  
 ### [T1078](https://attack.mitre.org/techniques/T1078/) — Valid Accounts
