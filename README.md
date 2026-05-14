@@ -215,15 +215,19 @@ Un attaquant déterminé ne s'arrête pas à un premier échec. Il adapte sa tac
 - Dashboard de surveillance automatique (E4)
 - Alertes en temps réel sur les comportements suspects
 - Documentation complète pour l'escalade N2
+
+
+<div align="center">
+
 ---
 
-
-## 🔗 Navigation
+### 🔗 Navigation
 
 | ⬅️ Retour au profil |
-|---|
-| [← Retour au profil](https://github.com/Paulcyber06) |
+|:---:|
+| [← Retour au profil général](https://github.com/Paulcyber06) |
 
+</div>
 --- 
 
 ## 📁 Reproduire cette analyse
