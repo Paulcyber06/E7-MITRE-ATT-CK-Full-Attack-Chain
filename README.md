@@ -163,6 +163,8 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
 **Épisode 6** — En moins de 15 secondes après la connexion FTP :
 
 [![MITRE T1505.003 — Web Shell](webshell.png)](https://attack.mitre.org/techniques/T1505/003/)
+
+<br>
  
 <div align="center">
  
@@ -174,6 +176,9 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
 | 23:26:41 | `CHMOD 777 shell.php` — permissions d'exécution |
 | 23:26:58 | Accès au webshell via navigateur |
  </div>
+
+ <br>
+
  
 ### [T1190](https://attack.mitre.org/techniques/T1190/) — Exploit Public-Facing Application
 **Épisode 6** — Confirmation de l'accès au webshell :
