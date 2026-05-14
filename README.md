@@ -22,6 +22,8 @@ L'équipe SOC de **Buttercup Games** a détecté et investigué une série d'att
 L'attaquant, persistant et méthodique, a adapté sa tactique à chaque échec — du phishing à la reconnaissance web, puis au brute force FTP.
  
 **Timeline des incidents :**
+
+<br>
  
 <div align="center">
 
@@ -35,6 +37,8 @@ L'attaquant, persistant et méthodique, a adapté sa tactique à chaque échec �
 | [E6](https://github.com/Paulcyber06/E6-Wireshark-Post-Exploitation) | Wireshark | Post-exploitation — webshell `shell.php` déployé |
 
 </div>
+
+ <br>
  
 ## 2. Cyber Kill Chain® — Lockheed Martin
  
