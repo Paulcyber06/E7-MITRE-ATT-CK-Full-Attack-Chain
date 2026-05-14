@@ -218,19 +218,15 @@ Un attaquant déterminé ne s'arrête pas à un premier échec. Il adapte sa tac
 
 
 <div align="center">
+<br>
+
+[![⬅️ Précédent](https://img.shields.io/badge/⬅️%20Précédent--grey?style=for-the-badge)](https://github.com/Paulcyber06/E6-Wireshark-Post-Exploitation)
+[![⬅️ Retour au profil](https://img.shields.io/badge/🏠%20Retour--grey?style=for-the-badge)](https://github.com/Paulcyber06)
+
+<br>
+</div> 
 
 ---
-
-### 🔗 Navigation
-
-| ⬅️ Retour au profil |
-|:---:|
-| [← Retour au profil général](https://github.com/Paulcyber06) |
-
-</div>
-
-
---- 
 
 ## 📁 Reproduire cette analyse
  
@@ -240,6 +236,6 @@ Tous les fichiers sources sont disponibles dans leurs articles respectifs :
 - **E1** — Email de phishing réel (non distribué pour des raisons de confidentialité)
 - **E2/E3/E4** — [tutorialdata.zip Splunk](https://docs.splunk.com/images/Tutorial/tutorialdata.zip)
 - **E5/E6** — [TryHackMe — room h4cked](https://tryhackme.com/room/h4cked)
----
+
 
 *© Paulcyber06 — Tous droits réservés.*
