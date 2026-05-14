@@ -81,7 +81,7 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
 ## 4. Détail des techniques ATT&CK
  
 ### [T1566](https://attack.mitre.org/techniques/T1566/) — Phishing
-**Épisode 1** — L'attaquant, ayant eu connaissance que Buttercup Games utilise **Proton for Business**, a usurpé l'identité de Proton pour tenter de voler les credentials d'un employé via une fausse page de connexion hébergée sur `vercel.app`.
+**Épisode 1** — L'attaquant, ayant eu connaissance que Buttercup Games utilise **Proton**, a usurpé l'identité de Proton pour tenter de voler les credentials d'un employé via une fausse page de connexion hébergée sur `vercel.app`.
  
 | Indicateur | Valeur |
 |-----------|--------|
