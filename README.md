@@ -216,7 +216,16 @@ Un attaquant déterminé ne s'arrête pas à un premier échec. Il adapte sa tac
 - Alertes en temps réel sur les comportements suspects
 - Documentation complète pour l'escalade N2
 ---
- 
+
+
+## 🔗 Navigation
+
+| ⬅️ Retour au profil |
+|---|
+| [← Retour au profil](https://github.com/Paulcyber06) |
+
+--- 
+
 ## 📁 Reproduire cette analyse
  
 Ce rapport est basé sur les investigations des épisodes E1 à E6.
