@@ -104,7 +104,6 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
 | Résultat | ❌ Échec — employé non piégé |
 
 </div>
----
  
 ### [T1083](https://attack.mitre.org/techniques/T1083/) — File and Directory Discovery
 **Épisodes 2 & 3** — L'IP `87.194.216.51` a sondé activement le serveur web à la recherche de fichiers sensibles sur une période de **7 jours**.
