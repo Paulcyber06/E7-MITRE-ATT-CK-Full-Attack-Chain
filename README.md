@@ -48,8 +48,10 @@ Le framework **Cyber Kill Chain®**, développé par Lockheed Martin, identifie 
  
 
  
+<div align="center">
+
 | Phase | Description |
-|-------|-------------|
+|:---:|:---:|
 | 1. Reconnaissance | L'attaquant collecte des informations sur la cible |
 | 2. Weaponization | Création d'un payload exploitant une vulnérabilité |
 | 3. Delivery | Livraison du payload — email, web, USB |
@@ -57,6 +59,8 @@ Le framework **Cyber Kill Chain®**, développé par Lockheed Martin, identifie 
 | 5. Installation | Installation d'un outil de persistance |
 | 6. Command & Control | Canal de communication avec la machine compromise |
 | 7. Actions on Objectives | L'attaquant atteint son objectif final |
+
+</div>
 
 
 
@@ -89,13 +93,16 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
 ### [T1566](https://attack.mitre.org/techniques/T1566/) — Phishing
 **Épisode 1** — L'attaquant, ayant eu connaissance que Buttercup Games utilise **Proton**, a usurpé l'identité de Proton pour tenter de voler les credentials d'un employé via une fausse page de connexion hébergée sur `vercel.app`.
  
+<div align="center">
+
 | Indicateur | Valeur |
-|-----------|--------|
+|:---:|:---:|
 | SPF | ❌ fail |
 | DMARC | ❌ fail |
 | DKIM | ⚠️ pass — signé par `bttlazer[.]org` (domaine attaquant) |
 | Résultat | ❌ Échec — employé non piégé |
- 
+
+</div>
 ---
  
 ### [T1083](https://attack.mitre.org/techniques/T1083/) — File and Directory Discovery
