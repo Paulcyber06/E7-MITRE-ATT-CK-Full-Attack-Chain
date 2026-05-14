@@ -13,7 +13,7 @@
 - [5. Gaps d'investigation](#5-gaps-dinvestigation)
 - [6. Rapport d'escalade — Éléments transmis à l'équipe N2](#6-rapport-descalade--éléments-transmis-à-léquipe-n2)
 - [7. Conclusion](#7-conclusion)
----
+
  
 ## 1. Contexte global
  
@@ -199,6 +199,8 @@ En tant qu'analyste SOC L1, certaines questions restent sans réponse et nécess
 - Bloquer les IPs `192.168.0.115` et `87.194.216.51` au niveau du pare-feu
 - Isoler le serveur victime le temps de l'investigation
 ### 📋 Éléments de preuve collectés
+
+ <div align="center">
  
 | Élément | Source | Épisode |
 |---------|--------|---------|
@@ -209,6 +211,8 @@ En tant qu'analyste SOC L1, certaines questions restent sans réponse et nécess
 | Webshell shell.php dans /var/www/html | Capture Wireshark | E6 |
 | OS attaquant : Linux x86_64, Firefox 78.0 | Capture Wireshark | E6 |
 | Heure de compromission : 2021-02-01 23:26:31 | Capture Wireshark | E5/E6 |
+
+  </div>
  
 ### 🔍 Investigation complémentaire demandée à l'équipe N2
  
