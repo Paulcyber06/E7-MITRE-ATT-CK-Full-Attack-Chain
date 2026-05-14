@@ -119,7 +119,6 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
 
  </div>
  
----
  
 ### [T1110](https://attack.mitre.org/techniques/T1110/) — Brute Force
 **Épisode 5** — N'ayant pas trouvé `/passwords.pdf`, l'attaquant a lancé une attaque brute force FTP contre le compte `jenny`.
@@ -157,7 +156,6 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
 | 23:26:41 | `CHMOD 777 shell.php` — permissions d'exécution |
 | 23:26:58 | Accès au webshell via navigateur |
  </div>
----
  
 ### [T1190](https://attack.mitre.org/techniques/T1190/) — Exploit Public-Facing Application
 **Épisode 6** — Confirmation de l'accès au webshell :
