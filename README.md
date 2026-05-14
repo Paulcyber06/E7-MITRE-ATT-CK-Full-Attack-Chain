@@ -107,6 +107,8 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
  
 ### [T1566](https://attack.mitre.org/techniques/T1566/) — Phishing
 **Épisode 1** — L'attaquant, ayant eu connaissance que Buttercup Games utilise **Proton**, a usurpé l'identité de Proton pour tenter de voler les credentials d'un employé via une fausse page de connexion hébergée sur `vercel.app`.
+
+ <br>
  
 <div align="center">
 
@@ -118,6 +120,9 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
 | Résultat | ❌ Échec — employé non piégé |
 
 </div>
+
+<br>
+
  
 ### [T1083](https://attack.mitre.org/techniques/T1083/) — File and Directory Discovery
 **Épisodes 2 & 3** — L'IP `87.194.216.51` a sondé activement le serveur web à la recherche de fichiers sensibles sur une période de **7 jours**.
