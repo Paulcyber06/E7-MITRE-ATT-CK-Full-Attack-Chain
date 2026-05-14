@@ -43,12 +43,16 @@ L'attaquant, persistant et méthodique, a adapté sa tactique à chaque échec �
 ## 2. Cyber Kill Chain® — Lockheed Martin
  
 Le framework **Cyber Kill Chain®**, développé par Lockheed Martin, identifie les 7 phases que tout attaquant doit compléter pour atteindre son objectif. Interrompre l'attaque à n'importe quelle phase suffit à la neutraliser.
+
+<br>
  
 <div align="center">
   
 [![Cyber Kill Chain — Lockheed Martin](killchain.png)](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)
 
 </div>
+
+<br>
  
 
  
