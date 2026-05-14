@@ -75,8 +75,11 @@ Le framework **Cyber Kill Chain®**, développé par Lockheed Martin, identifie 
 ---
  
 ## 3. Kill Chain complète — Buttercup Games
+
  
 Mapping de l'investigation sur le framework MITRE ATT&CK :
+
+<br>
  
 | Phase Kill Chain | Technique MITRE | ID | Outil | Résultat | Épisode |
 |-----------------|----------------|-----|-------|---------|---------|
@@ -86,6 +89,8 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
 | Exploitation | Valid Accounts | [T1078](https://attack.mitre.org/techniques/T1078/) | Wireshark | ❌ Connexion FTP réussie | [E5](https://github.com/Paulcyber06/E5-Wireshark-FTP-Brute-Force) |
 | Installation | Web Shell | [T1505.003](https://attack.mitre.org/techniques/T1505/003/) | Wireshark | ❌ shell.php déployé dans /var/www/html | [E6](https://github.com/Paulcyber06/E6-Wireshark-Post-Exploitation) |
 | Actions on Objectives | Exploit Public-Facing Application | [T1190](https://attack.mitre.org/techniques/T1190/) | Wireshark | ❌ Webshell accédé via navigateur Linux | [E6](https://github.com/Paulcyber06/E6-Wireshark-Post-Exploitation) |
+
+<br>
 
 [![MITRE ATT&CK Matrix for Enterprise](https://github.com/Paulcyber06/E7-MITRE-ATT-CK-Full-Attack-Chain/raw/main/mitre_matrix.png)](https://attack.mitre.org)
 
@@ -129,6 +134,8 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
 
  [![MITRE T1110 — Brute Force](mitre_t1110.png)](https://attack.mitre.org/techniques/T1110/)
 
+ <br>
+
  <div align="center">
  
 | Indicateur | Valeur |
@@ -139,6 +146,8 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
 | Résultat | ❌ Compromission réussie |
 
   </div>
+
+  <br>
 
  
 ### [T1078](https://attack.mitre.org/techniques/T1078/) — Valid Accounts
