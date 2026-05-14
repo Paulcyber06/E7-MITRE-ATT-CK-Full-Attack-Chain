@@ -99,7 +99,7 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
 |-----------|--------|
 | Cible principale | `/passwords.pdf` — tentée 3 fois |
 | Technique | Slow and low — basse fréquence pour éviter la détection |
-| Double activité | 894 accès légitimes simultanés aux tentatives de reconnaissance |
+| Double activité | 894 accès réussis simultanés aux tentatives de reconnaissance |
 | Résultat | ❌ Échec — fichier non trouvé |
  
 ---
