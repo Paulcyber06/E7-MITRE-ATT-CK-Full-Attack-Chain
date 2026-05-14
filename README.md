@@ -54,7 +54,7 @@ Le framework **Cyber Kill Chain®**, développé par Lockheed Martin, identifie 
 
 <br>
  
-
+<br>
  
 <div align="center">
 
@@ -70,6 +70,7 @@ Le framework **Cyber Kill Chain®**, développé par Lockheed Martin, identifie 
 
 </div>
 
+<br>
 
 
 > ⚠️ **Dans l'investigation Buttercup Games, l'attaquant a été bloqué aux phases 3 et 4 lors de ses premières tentatives** — il a dû changer de tactique avant de réussir.
