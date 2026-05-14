@@ -148,7 +148,7 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
 
 [![MITRE T1505.003 — Web Shell](webshell.png)](https://attack.mitre.org/techniques/T1505/003/)
  
-
+<div align="center">
  
 | Heure | Action |
 |-------|--------|
@@ -157,7 +157,7 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
 | 23:26:39 | Upload : `shell.php` |
 | 23:26:41 | `CHMOD 777 shell.php` — permissions d'exécution |
 | 23:26:58 | Accès au webshell via navigateur |
- 
+ </div>
 ---
  
 ### [T1190](https://attack.mitre.org/techniques/T1190/) — Exploit Public-Facing Application
