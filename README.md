@@ -35,7 +35,6 @@ L'attaquant, persistant et méthodique, a adapté sa tactique à chaque échec �
 | [E6](https://github.com/Paulcyber06/E6-Wireshark-Post-Exploitation) | Wireshark | Post-exploitation — webshell `shell.php` déployé |
 
 </div>
----
  
 ## 2. Cyber Kill Chain® — Lockheed Martin
  
