@@ -65,8 +65,8 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
  
 | Phase Kill Chain | Technique MITRE | ID | Outil | Résultat | Épisode |
 |-----------------|----------------|-----|-------|---------|---------|
-| Reconnaissance | File and Directory Discovery | [T1083](https://attack.mitre.org/techniques/T1083/) | Splunk | ❌ `/passwords.pdf` non trouvé | [E2](https://github.com/Paulcyber06/E2-Splunk-Reconnaissance-Detection) / [E3](https://github.com/Paulcyber06/E3-Splunk-Behavioral-Analysis) |
-| Delivery | Phishing | [T1566](https://attack.mitre.org/techniques/T1566/) | Email | ❌ Employé non piégé | [E1](https://github.com/Paulcyber06/E1-Phishing-Proton-Brand-Impersonation) |
+| Reconnaissance | File and Directory Discovery | [T1083](https://attack.mitre.org/techniques/T1083/) | Splunk | ✅ `/passwords.pdf` non trouvé | [E2](https://github.com/Paulcyber06/E2-Splunk-Reconnaissance-Detection) / [E3](https://github.com/Paulcyber06/E3-Splunk-Behavioral-Analysis) |
+| Delivery | Phishing | [T1566](https://attack.mitre.org/techniques/T1566/) | Email | ✅ Employé non piégé | [E1](https://github.com/Paulcyber06/E1-Phishing-Proton-Brand-Impersonation) |
 | Exploitation | Brute Force | [T1110](https://attack.mitre.org/techniques/T1110/) | Wireshark | ❌ Credentials compromis : jenny/password123 | [E5](https://github.com/Paulcyber06/E5-Wireshark-FTP-Brute-Force) |
 | Exploitation | Valid Accounts | [T1078](https://attack.mitre.org/techniques/T1078/) | Wireshark | ❌ Connexion FTP réussie | [E5](https://github.com/Paulcyber06/E5-Wireshark-FTP-Brute-Force) |
 | Installation | Web Shell | [T1505.003](https://attack.mitre.org/techniques/T1505/003/) | Wireshark | ❌ shell.php déployé dans /var/www/html | [E6](https://github.com/Paulcyber06/E6-Wireshark-Post-Exploitation) |
