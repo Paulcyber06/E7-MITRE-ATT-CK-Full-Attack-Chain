@@ -193,13 +193,17 @@ User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:78.0) Firefox/78.0
 ## 5. Gaps d'investigation
  
 En tant qu'analyste SOC L1, certaines questions restent sans réponse et nécessitent une investigation approfondie par l'équipe N2 :
- 
+
+<br>
+
 | Question | Hypothèse | Priorité |
 |----------|-----------|---------|
 | Comment l'attaquant a-t-il obtenu le nom d'utilisateur `jenny` ? | Ancien employé / connaissance interne / document obtenu en amont non détecté | 🔴 Critique |
 | L'IP `87.194.216.51` et l'attaquant FTP sont-ils la même personne ? | Mode opératoire similaire — méthodique et persistant | 🟡 À confirmer |
 | Le webshell a-t-il été utilisé après le premier accès ? | Non déterminé — nécessite analyse des logs serveur web | 🔴 Critique |
 | D'autres comptes ont-ils été ciblés ? | Non déterminé — nécessite analyse complète des logs FTP de la session du 2021-02-01 | 🟡 À vérifier |
+
+<br>
  
 ---
  
@@ -212,6 +216,8 @@ En tant qu'analyste SOC L1, certaines questions restent sans réponse et nécess
 - Bloquer les IPs `192.168.0.115` et `87.194.216.51` au niveau du pare-feu
 - Isoler le serveur victime le temps de l'investigation
 ### 📋 Éléments de preuve collectés
+
+<br>
 
  <div align="center">
  
@@ -226,6 +232,8 @@ En tant qu'analyste SOC L1, certaines questions restent sans réponse et nécess
 | Heure de compromission : 2021-02-01 23:26:31 | Capture Wireshark | E5/E6 |
 
   </div>
+
+  <br>
  
 ### 🔍 Investigation complémentaire demandée à l'équipe N2
  
