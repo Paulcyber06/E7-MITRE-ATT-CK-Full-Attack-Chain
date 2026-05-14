@@ -136,12 +136,11 @@ Mapping de l'investigation sur le framework MITRE ATT&CK :
 | Résultat | ❌ Compromission réussie |
 
   </div>
----
+
  
 ### [T1078](https://attack.mitre.org/techniques/T1078/) — Valid Accounts
 **Épisode 5** — Après avoir trouvé les credentials, l'attaquant s'est connecté au serveur FTP avec le compte `jenny` à **23:26:31**.
  
----
  
 ### [T1505.003](https://attack.mitre.org/techniques/T1505/003/) — Web Shell
 **Épisode 6** — En moins de 15 secondes après la connexion FTP :
