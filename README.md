@@ -23,15 +23,18 @@ L'attaquant, persistant et méthodique, a adapté sa tactique à chaque échec �
  
 **Timeline des incidents :**
  
+<div align="center">
+
 | Épisode | Outil | Incident détecté |
-|---------|-------|-----------------|
+|:---:|:---:|:---:|
 | [E1](https://github.com/Paulcyber06/E1-Phishing-Proton-Brand-Impersonation) | Email | Tentative de phishing usurpant Proton for Business |
 | [E2](https://github.com/Paulcyber06/E2-Splunk-Reconnaissance-Detection) | Splunk | Reconnaissance web — IP sondant `/passwords.pdf` |
 | [E3](https://github.com/Paulcyber06/E3-Splunk-Behavioral-Analysis) | Splunk | Analyse comportementale — double activité suspecte |
 | [E4](https://github.com/Paulcyber06/E4-Splunk-Dashboard-and-Alerts) | Splunk | Dashboard SOC + alerte automatique configurée |
 | [E5](https://github.com/Paulcyber06/E5-Wireshark-FTP-Brute-Force) | Wireshark | Brute force FTP — compte `jenny` compromis |
 | [E6](https://github.com/Paulcyber06/E6-Wireshark-Post-Exploitation) | Wireshark | Post-exploitation — webshell `shell.php` déployé |
- 
+
+</div>
 ---
  
 ## 2. Cyber Kill Chain® — Lockheed Martin
