@@ -19,7 +19,7 @@
  
 L'équipe SOC de **Buttercup Games** a détecté et investigué une série d'attaques coordonnées contre l'infrastructure de la société. L'investigation a débuté par la détection d'un email de phishing et s'est conclue par la découverte d'un webshell actif sur le serveur web.
  
-L'attaquant, persistant et méthodique, a adapté sa tactique à chaque échec — du phishing à la reconnaissance web, puis au brute force FTP.
+L'attaquant, persistant et méthodique, a adapté sa tactique à chaque échec, en passant du phishing à la reconnaissance web, puis au brute force FTP.
  
 **Timeline des incidents :**
 
@@ -73,7 +73,7 @@ Le framework **Cyber Kill Chain®**, développé par Lockheed Martin, identifie 
 <br>
 
 
-> ⚠️ **Dans l'investigation Buttercup Games, l'attaquant a été bloqué aux phases 3 et 4 lors de ses premières tentatives** — il a dû changer de tactique avant de réussir.
+> ⚠️ **Dans l'investigation Buttercup Games, l'attaquant a été bloqué aux phases 3 et 4 lors de ses premières tentatives**. Il a dû changer de tactique avant de réussir.
 
  *Source : [Lockheed Martin — Cyber Kill Chain®](https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html)*
  
@@ -275,7 +275,7 @@ Cette investigation illustre une attaque en **trois phases distinctes** :
 3. **Accès direct par force brute** (E5/E6) — Brute force FTP → ✅ compromission totale en 32 secondes
 **Ce que cette investigation démontre :**
  
-Un attaquant déterminé ne s'arrête pas à un premier échec. Il adapte sa tactique jusqu'à trouver le maillon faible — ici, un mot de passe faible sur un protocole non chiffré (FTP).
+Un attaquant déterminé ne s'arrête pas à un premier échec. Il adapte sa tactique jusqu'à trouver le maillon faible. Ici, un mot de passe faible sur un protocole non chiffré (FTP).
  
 **Ce que le SOC a mis en place :**
 - Dashboard de surveillance automatique (E4)
