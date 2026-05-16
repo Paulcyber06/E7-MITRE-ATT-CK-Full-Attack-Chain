@@ -1,6 +1,8 @@
 # E7 — MITRE ATT&CK : Reconstruction d'une Chaîne d'Attaque Complète
  
 > Rapport de synthèse final de l'investigation **Buttercup Games**. Cet article relie les 6 épisodes précédents en une kill chain complète, mappée sur le framework MITRE ATT&CK, et constitue le rapport d'escalade transmis à l'équipe N2.
+
+<br>
  
 ---
  
